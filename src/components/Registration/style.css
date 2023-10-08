@@ -1,0 +1,34 @@
+.logo {
+    width: 6rem;
+    height: 6rem;
+    background-image: url(circle-user-solid.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+      color: #556b74;
+  }
+
+  .button {
+      background-color: #556b74;
+      color: white;
+      padding: 0.4rem 0.5rem;
+      cursor: pointer;
+}
+
+.formInput {
+    margin: 0.5rem 0;
+}
+
+input {
+    padding: 0.3rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
