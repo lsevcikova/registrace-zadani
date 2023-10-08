@@ -19,10 +19,14 @@ const Registration = () => {
 
   const handleEmailChange = event => {
     const { value } = event.target
+    let username = user.username
+    if (username === '' && value.indexOf('@') != -1) {
+      username = value.split('@')[0]
+    }
     setUser(prevState => ({
       ...prevState,
       email: value,
-      username: value.split('@')[0]
+      username
     }))
   }
 
@@ -46,7 +50,7 @@ const Registration = () => {
           <div className='formInput'>
             <input
               type='text'
-              name='user name'
+              name='username'
               id='userName'
               required
               placeholder='User Name'
@@ -77,7 +81,11 @@ const Registration = () => {
             />
           </div>
           <div className='formInput'>
-            <button className='button' type='button' onClick={() => console.log(user)}>
+            <button
+              className='button'
+              type='button'
+              onClick={() => console.log(user)}
+            >
               Register
             </button>
           </div>
